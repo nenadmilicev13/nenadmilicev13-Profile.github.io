@@ -1,0 +1,94 @@
+@font-face {
+	font-family: "fonticons";
+	src: url('assets/icons/fonticons.woff2') format('woff2'), url('assets/icons/fonticons.woff') format('woff'), url('assets/icons/fonticons.ttf') format('truetype');;
+}
+
+@mixin font-styles {
+	font-family: "fonticons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%font {
+	@include font-styles;
+}
+
+@function font-char($filename) {
+	$char: "";
+
+	@if $filename == arrow {
+		$char: "\E001";
+	}
+	@if $filename == facebook-letter-logo {
+		$char: "\E002";
+	}
+	@if $filename == home {
+		$char: "\E003";
+	}
+	@if $filename == linkedin-logo {
+		$char: "\E004";
+	}
+	@if $filename == phone-receiver {
+		$char: "\E005";
+	}
+	@if $filename == play-button {
+		$char: "\E006";
+	}
+	@if $filename == right {
+		$char: "\E007";
+	}
+	@if $filename == search {
+		$char: "\E008";
+	}
+	@if $filename == twitter {
+		$char: "\E009";
+	}
+
+	@return $char;
+}
+
+@mixin font($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %font;
+		} @else {
+			@include font-styles;
+		}
+		content: font-char($filename);
+	}
+}
+
+.font-arrow {
+	@include font(arrow);
+}
+.font-facebook-letter-logo {
+	@include font(facebook-letter-logo);
+}
+.font-home {
+	@include font(home);
+}
+.font-linkedin-logo {
+	@include font(linkedin-logo);
+}
+.font-phone-receiver {
+	@include font(phone-receiver);
+}
+.font-play-button {
+	@include font(play-button);
+}
+.font-right {
+	@include font(right);
+}
+.font-search {
+	@include font(search);
+}
+.font-twitter {
+	@include font(twitter);
+}
+

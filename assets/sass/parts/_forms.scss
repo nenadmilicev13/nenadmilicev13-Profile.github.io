@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+## Forms
+--------------------------------------------------------------*/
+input[type='text'],
+input[type='tel'] {
+    width: 100%;
+    padding: 12px 33px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid $grey;
+    margin-bottom: 9px;
+    transition: $dur $ease;
+
+    &:hover {
+        border-color: $orange;
+    }
+
+    @include mq($phone) {
+       padding: 5px 33px;
+    }
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: $hawkes-blue;
+    text-align: left;
+}

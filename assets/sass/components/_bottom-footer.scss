@@ -1,0 +1,71 @@
+.bottom-footer {
+    background-color: $blue-dark;
+    padding: 30px  0 120px;
+
+    @include mq($phone) {
+        padding: 30px 0 50px;
+    } 
+}
+
+.bottom-footer__content {
+    position: relative;
+}
+
+.bottom-footer__media {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    display: flex;
+    align-items: center;
+
+    .icon-phone {
+        background-color: $orange;
+        padding: 18px;
+        color: $white;
+        transition: $ease $dur;
+
+        &:hover {
+            background-color: $green;
+            color: $black;
+        }
+    }
+
+    .phone {
+        font-size: 25px;
+        padding: 13px 30px;
+        background-color: $blue-dark;
+        color: $white;
+    }
+
+    @include mq($tablet-l) {
+        .icon-phone {
+            font-size: 15px;
+        }
+
+        .phone {
+            font-size: 21px;
+            padding: 9px 30px;
+        }
+    }
+
+    @include mq($phone) {
+       bottom: 148px;
+
+       .icon-phone {
+           font-size: 8px;
+           padding: 11px;
+       }
+
+       .phone {
+        font-size: 14px;
+        padding: 5px 30px;
+    }
+    }
+}
+
+.bottom-footer__content-text {
+    max-width: 952px;
+    width: 100%;
+    color: $blue;
+    font-size: 13px;
+}

@@ -1,0 +1,136 @@
+.box-section {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 63px;
+        width: 100%;
+        background-color: $snow;
+        border-bottom: 1px solid $whisper;
+    }
+
+    @include mq($tablet-l) {
+        &::before {
+            content: '';
+            position: static;
+            height: auto;
+            background-color: none;
+            border-bottom: none;
+        }
+     }
+}
+
+.box-section__item-wrap {
+    border-right: 1px solid $whisper;
+
+    @include mq($tablet-l) {
+        border-right: none;
+     }
+}
+
+.box-section__item-title {
+    font-size: 14px;
+    line-height: 2.4;
+    text-transform: uppercase;
+    padding: 15px 0;
+    color: $bayoux;
+}
+
+.box-section__item {
+    margin-top: 33px;
+
+    .yellow-text {
+        color: $orange;
+        max-width: 250px;
+        width: 100%;
+    }
+    
+    .blue-text {
+        color: $blue-dark;
+        max-width: 290px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .date {
+        font-size: 14px;
+        font-style: italic;
+        color: $mischka;
+    }
+
+    .box-wrapp {
+        margin-top: 25px;
+        margin-bottom: 180px;
+    }
+
+    @include mq($tablet-l) {
+        margin-top: 0;
+
+        .yellow-text {
+            max-width: 100%;    
+        }
+
+        .blue-text {
+            max-width: 100%;
+        }
+
+       .box-wrapp {
+           margin-bottom: 50px;
+       }
+    }
+}
+
+.box-section__item__image {
+    position: relative;
+    margin: 25px 0 11px;
+
+    img {
+        width: 100%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.5);
+        top: 0;
+        left: 0;
+    }
+}
+
+.box-item__play {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    z-index: 1;
+
+    .icon {
+        font-size: 12px;
+        border: 3px solid $white;
+        border-radius: 50%;
+        padding: 7px;
+        color: $white;
+    }
+
+    .text {
+        color: $white;
+        padding-left: 16px;
+    }
+
+    @include mq($phone) {
+        .icon {
+            font-size: 6px;
+        }
+
+        .text {
+            padding-left: 8px;
+            font-size: 12px;
+        }
+    }
+}
+
+

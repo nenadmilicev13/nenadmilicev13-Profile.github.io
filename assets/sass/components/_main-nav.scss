@@ -1,0 +1,103 @@
+.navigation {
+    position: absolute;
+    top: 100%;
+    padding-left: calc(50% - 598px);
+    z-index: 1;
+
+    @include mq($phone) {
+       padding-left: 0;
+       width: 100%;
+    } 
+}
+
+.navigation-container {
+    display: flex;
+    align-items: center;
+    background-color: $orange;
+
+    @include mq($phone) {
+        background-color: $darkgoldenrod;
+    } 
+}
+
+.main-nav__box {
+    position: relative;
+}
+
+.nav-home {
+    margin-left: 12px;
+
+    .icon {
+        color: $white;
+        font-size: 14px;
+    }
+
+    @include mq($phone) {
+        position: absolute;
+        top: 5px;
+        margin-left: 0;
+    } 
+
+}
+
+.main-nav {
+    padding: 26px 0;
+
+    > ul > li {
+        display: inline-block;
+        position: relative;
+        margin-left: 50px;
+    }
+
+    > ul > li > a {
+        font-size: 16px;
+        font-family: $font-main;
+        font-weight: 600;
+        color: $white;
+        padding-right: 22px; 
+        // position: relative;
+
+        &.arrow {
+            position: relative;
+
+            &::after {
+                content: font-char(arrow);
+                @include font-styles;
+                position: absolute;
+                font-size: 7px;
+                top: 4px;
+                right: 0;
+                border: 1px solid $black;
+                padding: 0 3px;
+                background-color: $blue-dark;
+            } 
+        }
+    }
+
+    @include mq($phone) {
+        width: 100%;
+        text-align: center;
+        display: none;
+
+        > ul > li {
+            display: block;
+            margin-left: 0;
+            padding: 10px 0;
+            border-bottom: 1px solid $snow;
+        }
+
+        > ul > li > a {
+            font-family: $font-sec;
+        }
+    } 
+}
+
+.main-nav > li:nth-of-type(1) > a {
+    padding-left: 32px;
+}
+
+.main-nav li:hover .drop-menu {
+    opacity: 1;
+    visibility: visible;
+}
+

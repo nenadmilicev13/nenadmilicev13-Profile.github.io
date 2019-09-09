@@ -1,0 +1,134 @@
+.intro {
+    background-color: $light;
+}
+
+.intro__item {
+    padding: 56px 42px;
+    background-color: $white;
+    height: 100%;
+}
+
+.intro-item__image {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.intro-item__title {
+    font-size: 20px;
+    line-height: 1.3;
+    font-family: $font-thrid;
+    color: $bayoux;
+    margin-bottom: 33px;
+
+    @include mq($phone) {
+      font-size: 16px;
+    }
+}
+
+.intro--entry-content {
+    margin-bottom: 73px;
+    color: $bayoux;
+    text-align: left;
+    max-width: 324px;
+    width: 100%;
+
+    @include mq($tablet-l) {
+        max-width: 100%;
+        margin-bottom: 37px;
+    }
+
+    @include mq($phone) {
+        font-size: 12px;
+      }
+}
+
+.intro__item-list {
+    background-color: $snow;
+    padding: 68px 42px;
+
+    @include mq($tablet-l) {
+        padding: 48px 42px;
+    }
+}
+
+.item__list {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 26px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 11px;
+        height: 11px;
+        background-color: $white;
+        border: 2px solid $orange;
+        border-radius: 50%;
+    }
+
+    a {
+        color: $blue-dark;
+    }
+
+    @include mq($phone) {
+        a {
+            font-size: 13px;
+        }
+      }
+}
+
+.item__list:nth-last-of-type(2) {
+    margin-bottom: 0;
+}
+
+.intro-item__video {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.intro-item__play {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    left: 32px;
+
+    .icon {
+        font-size: 12px;
+        border: 5px solid $white;
+        border-radius: 50%;
+        padding: 5px;
+        color: $white;
+        margin: 0 auto;
+    }
+
+    .text {
+        margin-left: 18px;
+        color: $white;
+        font-size: 16px;
+    }
+
+    @include mq($phone) {
+        .icon {
+            font-size: 7px;
+        }
+
+        .text {
+            font-size: 12px;
+            margin-left: 9px;
+        }
+      }
+}
+
+.intro-item-video__content {
+    background-color: $white;
+    padding: 60px 40px;
+}

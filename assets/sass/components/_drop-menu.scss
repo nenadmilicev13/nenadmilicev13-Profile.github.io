@@ -1,0 +1,42 @@
+.drop-menu {
+    position: absolute;
+    padding-top: 45px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 234px;
+    transition: $ease $dur;
+    cursor: pointer;
+
+    ul {
+        background-color: $wheat;
+    }
+
+    li {
+        display: block;
+        border-bottom: 1px solid $snow;
+
+        &:hover {
+            background-color: $galliano;
+            color: $white;
+        }
+    }
+
+    a {
+        color: $black;
+        padding: 10px 40px;
+        display: inline-block;
+        width: 100%;
+    }
+
+    @include mq($phone) {
+        position: relative;
+        padding-top: 0;
+        display: none;
+        width: 100%;
+        opacity: inherit;
+        visibility: inherit;
+        transition: inherit;
+    } 
+}

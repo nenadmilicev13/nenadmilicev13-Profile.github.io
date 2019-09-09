@@ -1,0 +1,62 @@
+.search__item {
+    display: flex;
+    background-color: $jordi-blue;
+    padding: 31px 45px;
+    height: 100%;
+
+    @include mq($tablet-l) {
+        justify-content: space-between;
+    }
+
+    @include mq($phone) {
+        align-items: center;
+    }
+}
+
+.search-item__title,
+.search-item__txt {
+    color: $white;
+}
+
+.search-item__title {
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: $font-sec;
+
+    @include mq($phone) {
+        font-size: 15px;
+    }
+}
+
+.search-item__txt {
+    font-size: 12px;
+
+    @include mq($phone) {
+        font-size: 10px;
+    }
+}
+
+.search-item__icon {
+    margin-left: 70px;
+
+    .icon {
+        font-size: 25px;
+        color: $cello;
+    }
+}
+
+.search__item--wedgewood {
+    background-color: $wedgewood;
+}
+
+.search__item--sanmarino {
+    background-color: $sanmarino;
+}
+
+.search__item--catalina-blue {
+    background-color: $catalina-blue;
+}
+
+.search__item--sky-blue {
+    background-color: $sky-blue;
+}

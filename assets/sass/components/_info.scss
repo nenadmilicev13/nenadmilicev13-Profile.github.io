@@ -1,0 +1,50 @@
+.info {
+    position: relative;
+    background-color: $light;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: calc(50% - 168px);
+        background-color: $bali-hai;
+        height: 100%;
+    }
+}
+
+.info__container {
+    position: relative;
+}
+
+.info-box {
+    background-color: $bali-hai;
+    padding: 40px 0 25px;
+}
+
+.info__text-content {
+    max-width: 507px;
+    width: 100%;
+    font-size: 20px;
+    color: $white;
+    font-family: $font-sec;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.1;
+
+    a {
+        font-family: $font-sec;
+        font-weight: 300;
+        text-decoration: underline;
+        color: $white;
+        transition: $dur $ease;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    @include mq($tablet-l) {
+       max-width: 375px;
+       font-size: 14px;
+       text-align: left;
+    }
+}

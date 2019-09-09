@@ -1,0 +1,34 @@
+/*--------------------------------------------------------------
+## Fonts
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('assets/fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('assets/fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Cn Rg';
+    src: url('assets/fonts/ProximaNovaCond-Regular.woff2') format('woff2'),
+        url('assets/fonts/ProximaNovaCond-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Cn Lt';
+    src: url('assets/fonts/ProximaNovaCond-Light.woff2') format('woff2'),
+        url('assets/fonts/ProximaNovaCond-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Cn Lt';
+    src: url('assets/fonts/ProximaNovaCond-Semibold.woff2') format('woff2'),
+        url('assets/fonts/ProximaNovaCond-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}

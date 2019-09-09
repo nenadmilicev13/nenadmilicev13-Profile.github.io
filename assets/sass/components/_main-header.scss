@@ -1,0 +1,135 @@
+.main-header {
+    background-color: $light;
+    position: relative;
+}
+
+.main-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 0;
+
+    @include mq($phone) {
+        padding: 5px 0;
+    }
+}
+
+.main-header__logo {
+    font-size: 30px;
+    line-height: 30px;
+    font-family: 'Proxima Nova Rg';
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $blue-dark;
+    margin-top: 8px;
+
+    @include mq($phone) {
+        font-size: 20px;
+    }
+}
+
+.main-header__media {
+    margin-top: 7px;
+
+    .icon {
+        font-size: 23px;
+        margin-right: 26px;
+        color: $bali-hai;
+
+        &:hover {
+            color: $black;
+        }
+    }
+    
+    @include mq($phone) {
+        margin-right: 60px;
+        
+        .icon {
+            font-size: 12px;
+            margin-right: 4px;
+        }
+    }
+}
+
+.bottom-header {
+    padding-left: calc(50% - 610px);
+}
+
+.bottom-header__container {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+}
+
+.bottom-header__email {
+    width: 900px;
+    padding: 13px 16px 9px;
+    text-align: right;
+
+    .mail {
+        font-size: 14px;
+        font-family: $font-main;
+        font-weight: 600;
+        color: $bali-hai;
+        padding-right: 8px;
+    }
+
+    @include mq($phone) {
+        padding: 0;
+
+        .mail {
+            padding-right: 0;
+            font-size: 12px;
+        }
+    }
+}
+
+.bottom-header__icon-phone {
+    margin-left: 17px;
+
+    .icon-phone {
+        font-size: 23px;
+        background-color: $galliano;
+        padding: 15px 18px;
+        color: $white;
+        transition: $ease $dur;
+
+        &:hover {
+            background-color: $green;
+            color: $black;
+        }
+    }
+
+    @include mq($phone) {
+        padding: 0;
+
+        .icon-phone {
+            font-size: 12px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.bottom-header__phone {
+    background-color: $blue-dark;
+    padding: 6.2px 0;
+    width: 605px;
+
+    .phone {
+        font-size: 25px;
+        font-family: $font-main;
+        font-weight: 600;
+        padding: 12px 0 11px 32px;
+        color: $white;
+    }
+
+    @include mq($phone) {
+        padding: 5px 0;
+
+        .phone {
+            padding-left: 10px;
+            font-size: 14px;
+        }
+    }
+}
